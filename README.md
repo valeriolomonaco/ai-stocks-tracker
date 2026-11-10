@@ -3,8 +3,8 @@
 A look behind the US tech and AI market map: where the data comes from, how one small script
 turns it into one file, and how the browser draws everything from that file.
 
-- **Live page:** https://ai-stocks-tracker.github.io/ai-stocks-tracker/
-- **Source code:** https://github.com/ai-stocks-tracker/ai-stocks-tracker
+- **Live page:** https://ai-stocks-tracker.github.io
+- **Source code:** https://github.com/ai-stocks-tracker/ai-stocks-tracker.github.io
 
 This repository holds only the explanation. The working code lives in the repository above.
 
