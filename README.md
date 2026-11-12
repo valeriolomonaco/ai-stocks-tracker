@@ -1,7 +1,8 @@
 # How the AI stocks tracker is made
 
-A look behind the US tech and AI market map: where the data comes from, how one small script
+A look behind the US tech and AI market map. I now explain where the data comes from, how one small script
 turns it into one file, and how the browser draws everything from that file.
+This is an educational project, not investment advice.
 
 - **Live page:** https://ai-stocks-tracker.github.io
 - **Source code:** https://github.com/ai-stocks-tracker/ai-stocks-tracker.github.io
@@ -14,7 +15,7 @@ This repository holds only the explanation. The working code lives in the reposi
 
 A heatmap of about 65 US large caps by sector, and a separate AI cluster of 33 companies in six
 layers of the AI value chain. Tile size is market cap, colour is the return over the chosen
-period. The design rule was to keep every moving part small: one Python script downloads prices
+period. The design rule contains one Python script that downloads prices
 and writes **one data file**; the page is plain HTML, CSS and JavaScript that does **every
 calculation in the browser**. There is no server, no database and no API key, so the same files
 run on a laptop and on GitHub Pages.
@@ -25,8 +26,8 @@ run on a laptop and on GitHub Pages.
 
 In plain words:
 
-1. **Yahoo Finance** has the stock prices, free.
-2. **build.py** downloads them every weekday after the US close.
+1. **Yahoo Finance** has the stock prices, good source for educational purpose.
+2. **build.py** downloads them every weekday after the price close.
 3. **data.js** is one file that holds all the prices.
 4. **GitHub Pages** puts the page online.
 5. **Your browser** does all the maths and draws the map, the chart and the table.
@@ -149,10 +150,9 @@ downloaded again.
 
 ## Design
 
-The page follows a small personal design kit: navy titles with a blue square and a 1 px blue
+The page follows my small personal design. I use navy titles with a blue square and a 1 px blue
 rule, Manrope for text and Courier Prime for numbers and labels, sharp rectangles, booktabs
 tables. Fonts and d3 are stored next to the page, so it makes no requests to other sites.
-
 Night mode uses GitHub's dark palette. The page opens in day mode; the button in the header
 switches and remembers the choice in the visitor's own browser.
 
@@ -164,15 +164,14 @@ On a phone the controls wrap, the map gets taller and the table scrolls sideways
 
 ## Limits worth knowing
 
-- **Data source.** Yahoo Finance through the unofficial `yfinance` library: free and keyless,
-  but it can break when Yahoo changes its site, and its terms cover personal use.
+- **Data source.** Yahoo Finance through the `yfinance` library.
 - **Market caps are approximate.** They are today's shares outstanding times past closes, so past
   caps ignore buybacks and new shares. Fine for tile sizes and group totals, not a precise history.
 - **Daily closes only.** No intraday prices; weekends and US holidays show the last trading day.
 - **The schedule pauses itself.** GitHub stops scheduled workflows in a public repository after
   60 days without commits; one click in the Actions tab restarts it.
 
-This is an educational project, not investment advice.
+Once again, this is an educational project, not investment advice.
 
 ## License
 
