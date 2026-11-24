@@ -13,7 +13,7 @@ This repository holds only the explanation. The working code lives in the reposi
 
 ## The idea in one paragraph
 
-A heatmap of about 65 US large caps by sector, and a separate AI cluster of 33 companies in six
+A heatmap of about 65 US large caps by sector, and a separate AI cluster of nearly 40 companies in six
 layers of the AI value chain. Tile size is market cap, colour is the return over the chosen
 period. The design rule contains one Python script that downloads prices
 and writes **one data file**; the page is plain HTML, CSS and JavaScript that does **every
